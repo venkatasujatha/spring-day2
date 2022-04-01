@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 import com.user.entity.User;
 
 @Repository
-public interface UserServiceInt implements JPArepository{
+public interface UserServiceInt{
 	public User save(User  user);
 	public String addData(int n1,int n2);
 	public String age(int n1);

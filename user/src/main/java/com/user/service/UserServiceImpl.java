@@ -1,12 +1,15 @@
 package com.user.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.user.entity.User;
+import com.user.repo.Repositiry;
 @Service
 public class UserServiceImpl implements UserServiceInt {
 
-	
+	@Autowired
+	Repositiry repo;
 	
 	@Override
 	public User save(User user) {
@@ -33,7 +36,8 @@ public class UserServiceImpl implements UserServiceInt {
 	public String delete(int n1) 
 	{
 		
-		return "Result::";
+		repo.deleteById(n1);
+		return "deleted";
 	}
 	
 }

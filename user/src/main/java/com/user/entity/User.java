@@ -1,7 +1,10 @@
 package com.user.entity;
 
+import javax.persistence.Id;
+
 public class User {
 	private String Name;
+	@Id
 	private int id;
 	private String email;
 	private int num;
